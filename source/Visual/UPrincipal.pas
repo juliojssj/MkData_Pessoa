@@ -56,6 +56,7 @@ type
     procedure DSPessoaDataChange(Sender: TObject; Field: TField);
     procedure FormCreate(Sender: TObject);
     procedure BtnConsultaClick(Sender: TObject);
+    procedure EdtIdChange(Sender: TObject);
   private
     { Private declarations }
     function ValidaDados:Boolean;
@@ -150,6 +151,19 @@ begin
   BtnCancelar.Enabled := DSPessoa.DataSet.State in [dsInsert, dsEdit];
 
   CarregaDados;
+end;
+
+procedure TFrmPrincipal.EdtIdChange(Sender: TObject);
+var Vint:integer;
+begin
+  Vint := strtoint(EdtId.Text);
+  if Vint < 0 then
+  begin
+    EdtId.Visible:=false;
+  end else begin
+    EdtId.Visible:=true;
+  end;
+
 end;
 
 procedure TFrmPrincipal.FormCreate(Sender: TObject);

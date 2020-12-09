@@ -52,12 +52,6 @@ object FrmPrincipal: TFrmPrincipal
           Columns = <
             item
               Expanded = False
-              FieldName = 'ID'
-              Width = 30
-              Visible = True
-            end
-            item
-              Expanded = False
               FieldName = 'TELEFONE'
               Title.Caption = 'Telefone'
               Width = 231
@@ -138,12 +132,6 @@ object FrmPrincipal: TFrmPrincipal
           Columns = <
             item
               Expanded = False
-              FieldName = 'Id'
-              Width = 30
-              Visible = True
-            end
-            item
-              Expanded = False
               FieldName = 'EMAIL'
               Title.Caption = 'E-mail'
               Width = 231
@@ -189,6 +177,7 @@ object FrmPrincipal: TFrmPrincipal
         DataSource = DSPessoa
         Enabled = False
         TabOrder = 0
+        OnChange = EdtIdChange
       end
       object RadioGroup1: TRadioGroup
         Left = 90
@@ -310,12 +299,6 @@ object FrmPrincipal: TFrmPrincipal
       TitleFont.Name = 'Tahoma'
       TitleFont.Style = []
       Columns = <
-        item
-          Expanded = False
-          FieldName = 'Id'
-          Width = 30
-          Visible = True
-        end
         item
           Expanded = False
           FieldName = 'TIPOPESSOA'
