@@ -24,19 +24,22 @@ object FrmPrincipal: TFrmPrincipal
     TabOrder = 0
     object paginaControle: TPageControl
       Left = 1
-      Top = 177
+      Top = 129
       Width = 451
-      Height = 396
+      Height = 444
       ActivePage = abaTelefone
       Align = alClient
       TabOrder = 0
+      ExplicitTop = 177
+      ExplicitHeight = 396
       object abaTelefone: TTabSheet
         Caption = 'Telefone'
+        ExplicitHeight = 368
         object DBGridTelefone: TDBGrid
           Left = 0
           Top = 30
           Width = 443
-          Height = 338
+          Height = 386
           Align = alClient
           DataSource = DSTelefone
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -91,6 +94,7 @@ object FrmPrincipal: TFrmPrincipal
       object abaEmail: TTabSheet
         Caption = 'E-mail'
         ImageIndex = 1
+        ExplicitHeight = 368
         object TPanel
           Left = 0
           Top = 0
@@ -121,7 +125,7 @@ object FrmPrincipal: TFrmPrincipal
           Left = 0
           Top = 30
           Width = 443
-          Height = 338
+          Height = 386
           Align = alClient
           DataSource = DSEmail
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -152,7 +156,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 1
       Top = 1
       Width = 451
-      Height = 176
+      Height = 128
       Align = alTop
       TabOrder = 1
       object Label1: TLabel
@@ -170,8 +174,8 @@ object FrmPrincipal: TFrmPrincipal
         Caption = 'Nome'
       end
       object Label3: TLabel
-        Left = 6
-        Top = 91
+        Left = 271
+        Top = 49
         Width = 117
         Height = 13
         Caption = 'Documento (CNPJ/CPF):'
@@ -222,16 +226,16 @@ object FrmPrincipal: TFrmPrincipal
       object EdtNome: TDBEdit
         Left = 5
         Top = 64
-        Width = 399
+        Width = 260
         Height = 21
         DataField = 'NOME'
         DataSource = DSPessoa
         TabOrder = 5
       end
       object EdtDoc: TDBEdit
-        Left = 5
-        Top = 106
-        Width = 399
+        Left = 271
+        Top = 64
+        Width = 130
         Height = 21
         DataField = 'DOCUMENTO'
         DataSource = DSPessoa
@@ -239,7 +243,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object BtnNovo: TButton
         Left = 5
-        Top = 133
+        Top = 91
         Width = 75
         Height = 25
         Caption = 'Novo'
@@ -248,7 +252,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object BtnAlterar: TButton
         Left = 86
-        Top = 133
+        Top = 91
         Width = 75
         Height = 25
         Caption = 'Alterar'
@@ -257,7 +261,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object BtnExcluir: TButton
         Left = 167
-        Top = 133
+        Top = 91
         Width = 75
         Height = 25
         Caption = 'Excluir'
@@ -266,7 +270,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object BtnSalvar: TButton
         Left = 248
-        Top = 133
+        Top = 91
         Width = 75
         Height = 25
         Caption = 'Salvar'
@@ -275,7 +279,7 @@ object FrmPrincipal: TFrmPrincipal
       end
       object BtnCancelar: TButton
         Left = 329
-        Top = 133
+        Top = 91
         Width = 75
         Height = 25
         Caption = 'Cancelar'
